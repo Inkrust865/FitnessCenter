@@ -1,0 +1,274 @@
+.gym {
+  @include section-property;
+
+  background-color: $base-color-1;
+}
+
+.gym__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 1160px;
+  margin: 120px auto;
+}
+
+.gym__text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 350px;
+  margin-left: 60px;
+
+  h2 {
+    @include section-title-desktop;
+    margin-top: 49px;
+  }
+}
+
+.gym__intro {
+  margin: 0;
+  margin-top: 5px;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+
+  color: $base-color-2;
+}
+
+.gym__description {
+  margin: 0;
+  margin-top: 40px;
+
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+
+  span {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.gym__images-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  position: relative;
+
+  width: 725px;
+  height: 518px;
+}
+
+.gym__image-wrapper {
+  width: 660px;
+  height: 401px;
+
+  background-color: $background-image;
+  overflow: hidden;
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+
+  width: 364px;
+  height: 228px;
+
+  background-color: $background-image;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 364px;
+    height: 228px;
+    bottom: 0;
+    left: 0;
+
+    background: rgba(20, 54, 122, 0.5);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 364px;
+    height: 228px;
+    bottom: 0;
+    left: 0;
+
+    background-image: url("../../img/video-play.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .gym__container {
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 99px auto;
+    width: 678px;
+  }
+
+  .gym__text-block {
+    align-items: center;
+
+    width: 100%;
+    margin-left: 0;
+
+    h2 {
+      @include section-title-tablet;
+      margin-top: 0;
+    }
+  }
+
+  .gym__intro {
+    margin-top: 8px;
+  }
+
+  .gym__description {
+    width: 502px;
+    margin-top: 34px;
+
+    text-align: center;
+
+    span {
+      display: none;
+    }
+  }
+
+  .gym__images-wrapper {
+    justify-content: center;
+
+    width: 100%;
+    height: 430px;
+
+    margin-top: 43px;
+  }
+
+  .gym__image-wrapper {
+    width: 100%;
+    height: 345px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .gym__video-wrapper {
+    width: 266px;
+    height: 167px;
+
+    left: 206px;
+    bottom: 2px;
+
+    &::before {
+      width: 266px;
+      height: 167px;
+    }
+
+    &::after {
+      width: 266px;
+      height: 167px;
+
+      background-size: 73px 73px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .gym__container {
+    width: 100%;
+    margin: 70px 0;
+  }
+
+  .gym__text-block {
+    width: 290px;
+    margin: 0 auto;
+    align-items: flex-start;
+
+    h2 {
+      @include section-title-mobile;
+    }
+  }
+
+  .gym__intro {
+    margin-top: 5px;
+  }
+
+  .gym__description {
+    width: 258px;
+    margin-top: 25px;
+    text-align: left;
+  }
+
+  .gym__images-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+  }
+
+  .gym__image-wrapper {
+    width: 100%;
+    height: 313px;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .gym__video-wrapper {
+    position: relative;
+
+    margin-top: 40px;
+    width: 100%;
+    height: 167px;
+    left: 0;
+
+    overflow: hidden;
+
+    &::before {
+      width: 100%;
+      height: 100%;
+
+      background: rgba(20, 54, 122, 0.5);
+    }
+
+    &::after {
+      width: 100%;
+      height: 100%;
+
+      background-size: 73px 73px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

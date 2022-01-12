@@ -1,0 +1,398 @@
+.subscription {
+  @include section-property;
+  position: relative;
+
+  background-color: $background-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 287px;
+    height: 494px;
+    bottom: -150px;
+    right: 0;
+
+    background-image: url("../../img/weights-desktop@1x.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/weights-desktop@2x.png");
+    }
+  }
+
+  h2 {
+    @include section-title-desktop;
+
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.subscription__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  width: 1160px;
+  margin: 119px auto;
+}
+
+.subscription__periods-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: relative;
+
+  width: 341px;
+  margin-top: 33px;
+
+  color: $base-color-2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 341px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+
+    background-color: $border-light;
+
+    z-index: 2;
+  }
+}
+
+.subscription__period-tab {
+  position: relative;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: $tab-color;
+
+  border: none;
+  background-color: $element-background;
+  padding: 0 0 12px;
+
+  cursor: pointer;
+
+  &::after {
+    content: none;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+
+    background-color: $accent-background;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-color-2;
+  }
+
+  &:active {
+    color: $base-color-2;
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &--active {
+    color: $base-color-2;
+
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.subscription__lists {
+  @include list-reset;
+
+  width: 100%;
+
+  z-index: 1;
+}
+
+.subscription__list {
+  @include list-reset;
+
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 38px;
+  width: 100%;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.subscription__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 360px;
+  height: 448px;
+  padding: 64px;
+  box-sizing: border-box;
+
+  background: $base-color-1;
+
+  &:hover,
+  &:focus {
+    background: url("../../img/subscription-hover.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .subscription__item-link {
+      color: $base-color-1;
+      background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+      border: none;
+
+      &:hover,
+      &:focus {
+        background: $accent-background;
+      }
+
+      &:active {
+        background: $accent-background;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  h3 {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 29px;
+
+    color: $base-color-2;
+
+    margin: 0;
+  }
+
+  p {
+    position: relative;
+
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 150%;
+
+    color: $accent-text;
+
+    margin: 0;
+    margin-top: 65px;
+  }
+}
+
+.subscription__item-description {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+
+  color: $light-text;
+
+  margin-top: 10px;
+}
+
+.subscription__price-shadow {
+  position: absolute;
+  width: 203px;
+  height: 69px;
+  top: -57px;
+  left: -20px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150%;
+  color: $text-shadow;
+
+  opacity: 0.48;
+  z-index: 1;
+}
+
+.subscription__price {
+  position: relative;
+  margin-right: 47px;
+
+  z-index: 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 42px;
+    top: 15px;
+    right: -47px;
+
+    background-image: url("../../img/icon-ruble.svg");
+    background-size: 30px 42px;
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}
+
+.subscription__item-link {
+  display: block;
+  width: 206px;
+  padding: 23px;
+  margin-top: 34px;
+  box-sizing: border-box;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: $base-color-2;
+  border: 2px solid $base-color-2;
+}
+
+@media (max-width: $desktop-width) {
+  .subscription {
+    &::before {
+      width: 347px;
+      height: 444px;
+      bottom: -125px;
+
+      background-image: url("../../img/weights-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/weights-tablet@2x.png");
+      }
+    }
+
+    h2 {
+      @include section-title-tablet;
+    }
+  }
+
+  .subscription__container {
+    width: 442px;
+    margin: 100px auto;
+  }
+
+  .subscription__periods-list {
+    margin-top: 30px;
+    width: 330px;
+
+    &::before {
+      width: 330px;
+    }
+  }
+
+  .subscription__period-tab {
+    font-size: 18px;
+  }
+
+  .subscription__list {
+    flex-direction: column;
+
+    margin-top: 44px;
+  }
+
+  .subscription__item {
+    width: 100%;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription {
+    &::before {
+      content: none;
+    }
+
+    h2 {
+      @include section-title-mobile;
+    }
+  }
+
+  .subscription__container {
+    width: 290px;
+    margin: 70px auto;
+  }
+
+  .subscription__periods-list {
+    margin-top: 21px;
+    width: 100%;
+
+    &::before {
+      width: 290px;
+    }
+  }
+
+  .subscription__period-tab {
+    padding-bottom: 14px;
+
+    font-size: 16px;
+  }
+
+  .subscription__list {
+    margin-top: 34px;
+  }
+
+  .subscription__item {
+    padding: 51px;
+    height: 384px;
+    margin-bottom: 35px;
+
+    h3 {
+      font-size: 22px;
+      line-height: 110.16%;
+    }
+
+    p {
+      font-size: 48px;
+      margin-top: 53px;
+    }
+  }
+
+  .subscription__price {
+    margin-right: 30px;
+
+    &::after {
+      height: 34px;
+      top: 13px;
+      right: -37px;
+
+      background-size: 30px 34px;
+    }
+  }
+
+  .subscription__price-shadow {
+    top: -44px;
+    left: -18px;
+
+    font-size: 80px;
+  }
+
+  .subscription__item-link {
+    padding: 24px;
+    margin-top: 30px;
+  }
+}

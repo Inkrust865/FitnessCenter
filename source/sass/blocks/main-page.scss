@@ -1,0 +1,16 @@
+.main-page__sections-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+
+  background: linear-gradient(90deg, $base-color-2 50%, $base-color-1 50%);
+  border-top: 1px solid $border-dark;
+}
+
+@media (max-width: $desktop-width) {
+  .main-page__sections-wrapper {
+    flex-direction: column;
+    background: none;
+    border: none;
+  }
+}

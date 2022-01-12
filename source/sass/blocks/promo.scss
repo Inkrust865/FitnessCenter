@@ -1,0 +1,194 @@
+.promo__container {
+  @include section-property;
+  display: flex;
+  flex-direction: row;
+
+  width: 1160px;
+  margin: 120px auto;
+}
+
+.promo__text {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  width: 100%;
+  padding: 85px 738px 85px 78px;
+  box-sizing: border-box;
+
+  background-color: $accent-background;
+  color: $base-color-1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 660px;
+    height: 500px;
+    top: 0;
+    right: 0;
+
+    background-image: url("../../img/supergames-desktop@1x.jpg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top right;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/supergames-desktop@2x.jpg");
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-top: 6px;
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+
+.promo__text-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  h2 {
+    @include section-title-desktop;
+
+    width: 201px;
+
+    font-family: $accent-font;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 0.03em;
+
+    color: $base-color-1;
+  }
+
+  p {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    width: 66px;
+    height: 40px;
+    margin: 0;
+  }
+}
+
+.promo__button {
+  width: 343px;
+  padding: 25px;
+  margin-top: 45px;
+  box-sizing: border-box;
+
+  font-family: $main-font;;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  color: $base-color-1;
+
+  border: 4px solid $base-color-1;
+
+  &:hover,
+  &:focus {
+    background-color: $base-color-1;
+    color: $base-color-2;
+  }
+
+  &:active {
+    background-color: $base-color-1;
+    color: $base-color-2;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .promo__container {
+    width: 678px;
+    margin: 100px auto;
+  }
+
+  .promo__text {
+    padding: 49px 431px 49px 45px;
+
+    &::before {
+      width: 386px;
+      height: 292px;
+
+      background-image: url("../../img/supergames-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/supergames-tablet@2x.jpg");
+      }
+    }
+
+    p {
+      margin: 0;
+
+      font-size: 12px;
+    }
+  }
+
+  .promo__text-header {
+    h2 {
+      @include section-title-tablet;
+
+      width: 117px;
+
+      font-size: 52px;
+      line-height: 52px;
+    }
+
+    p {
+      width: 46px;
+      height: 24px;
+    }
+  }
+
+  .promo__button {
+    width: 202px;
+    padding: 12px;
+    margin-top: 31px;
+
+    font-size: 10px;
+    line-height: 12px;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo__container {
+    flex-direction: column;
+
+    width: 290px;
+    margin: 70px auto;
+  }
+
+  .promo__text {
+    padding: 51px 45px 343px;
+
+    &::before {
+      width: 290px;
+      height: 292px;
+      bottom: 0;
+      top: auto;
+
+      background-image: url("../../img/supergames-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../../img/supergames-mobile@2x.jpg");
+      }
+    }
+
+    p {
+      margin-top: -2px;
+    }
+  }
+}

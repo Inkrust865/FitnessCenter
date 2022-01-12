@@ -1,0 +1,149 @@
+.feedback {
+  @include section-property;
+
+  width: 50%;
+
+  h2 {
+    @include section-title-desktop;
+
+    color: $base-color-1;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+    width: 410px;
+  }
+
+  input {
+    display: block;
+    width: 190px;
+    padding: 5px 0;
+    box-sizing: border-box;
+
+    background-color: $element-background;
+    border: 1px solid $element-background;
+    border-bottom: 1px solid $border-dark;
+
+    color: $base-color-1;
+
+    &::placeholder {
+      font-family: $main-font;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      color: $base-color-1;
+    }
+
+    &:hover {
+      border: 1px solid $border-dark;
+    }
+
+    &:focus,
+    &:active {
+      border: 1px solid $base-color-1;
+      outline: none;
+    }
+  }
+}
+
+.feedback__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 477px;
+  margin: 70px auto 65px;
+}
+
+.feedback__submit {
+  width: 410px;
+  padding: 15px;
+  margin-top: 30px;
+  box-sizing: border-box;
+
+  background: $element-background;
+  border: 3px solid $base-color-1;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $base-color-1;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $base-color-1;
+    color: $base-color-2;
+  }
+
+  &:active {
+    background-color: $base-color-1;
+    color: $base-color-2;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .feedback {
+    background-color: $base-color-2;
+
+    width: 100%;
+
+    h2 {
+      @include section-title-tablet;
+    }
+
+    form {
+      width: 472px;
+      margin-top: 35px;
+    }
+
+    input {
+      width: 206px;
+    }
+  }
+
+  .feedback__container {
+    width: 502px;
+    margin: 70px auto;
+  }
+
+  .feedback__submit {
+    width: 100%;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .feedback {
+    h2 {
+      @include section-title-mobile;
+    }
+
+    form {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    input {
+      width: 100%;
+      margin-top: 35px;
+    }
+  }
+
+  .feedback__container {
+    width: 290px;
+  }
+
+  .feedback__submit {
+    margin-top: 40px;
+  }
+}

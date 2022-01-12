@@ -1,0 +1,260 @@
+.page-footer {
+  display: flex;
+  justify-content: stretch;
+
+  background-color: $background-footer;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 1170px;
+  margin: 42px auto;
+}
+
+.page-footer__logo {
+  margin-left: 5px;
+}
+
+.page-footer__main-navigation {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 431px;
+  margin-left: 20px;
+
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.page-footer__nav-part {
+  &--first {
+    width: 35%;
+  }
+
+  &--second {
+    width: 55.6%
+  }
+}
+
+.page-footer__nav-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-footer__nav-link {
+  display: block;
+  color: $base-color-1;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.4;
+    text-decoration: underline;
+  }
+}
+
+.page-footer__social-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 112px;
+}
+
+.page-footer__social-item {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.page-footer__social-link {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 5px;
+    left: 0;
+
+    background-image: url("../../img/icon-vk-footer.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 13px;
+  }
+
+  &--ins {
+    &::before {
+      top: 0;
+
+      background-image: url("../../img/icon-ins-footer.svg");
+      background-size: 24px 24px;
+    }
+  }
+
+  &--fb {
+    &::before {
+      top: 0;
+      left: 6px;
+
+      background-image: url("../../img/icon-fb-footer.svg");
+      background-size: 12px 24px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus,
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .page-footer__container {
+    width: 690px;
+    margin: 47px auto;
+  }
+
+  .page-footer__logo {
+    svg {
+      width: 82px;
+      height: auto;
+    }
+  }
+
+  .page-footer__main-navigation {
+    margin-left: 18px;
+    width: 390px;
+  }
+
+  .page-footer__social-list {
+    width: 105px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer__container {
+    flex-direction: column;
+
+    width: 290px;
+    margin: 50px auto;
+  }
+
+  .page-footer__logo {
+    display: block;
+    align-self: flex-start;
+
+    margin-bottom: 25px;
+    margin-left: 0;
+    width: auto;
+    height: 15.5px;
+
+    svg {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .page-footer__main-navigation {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-left: 0;
+    margin-top: -4px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .page-footer__nav-part {
+    &--first {
+      width: 50%;
+    }
+
+    &--second {
+      width: 45%;
+      margin-top: -41px;
+    }
+  }
+
+  .page-footer__nav-list {
+    flex-direction: column;
+  }
+
+  .page-footer__nav-item {
+    width: 145px;
+  }
+
+  .page-footer__nav-link {
+    margin-bottom: 21px;
+  }
+
+  .page-footer__social-list {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .page-footer__social-item {
+    margin-right: 32px;
+    width: 32px;
+    height: 27px;
+  }
+
+  .page-footer__social-link {
+    width: 32px;
+    height: 27px;
+
+    &::before {
+      left: 0;
+      width: 32px;
+      height: 27px;
+
+      background-size: 32px 17px;
+    }
+
+    &--ins {
+      &::before {
+        top: 0;
+        left: 2.5px;
+        background-size: 27px 27px;
+      }
+    }
+
+    &--fb {
+      &::before {
+        background-size: 17px 27px;
+      }
+    }
+  }
+}

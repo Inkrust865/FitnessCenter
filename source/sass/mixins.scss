@@ -4,3 +4,36 @@
 
   list-style: none;
 }
+
+@mixin overflow-text() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin section-title-desktop() {
+  font-family: $accent-font;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+
+  color: $base-color-2;
+
+  margin: 0;
+}
+
+@mixin section-title-tablet() {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+@mixin section-title-mobile() {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+@mixin section-property() {
+  display: flex;
+  justify-content: stretch;
+}

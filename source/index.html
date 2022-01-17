@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <title>Liga A: Fitness Center</title>
-  <link rel="preload" href="css/style.min.css" as="style">
+  <meta name="description" content="Fitness Center">
+  <link rel="preload" href="fonts/roboto_condensed-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto_condensed-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto_condensed-light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebas_neue_bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebas_neue_regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body class="main-page">
@@ -686,7 +691,7 @@
             <label class="visually-hidden" for="name">Имя</label>
             <input type="text" name="name" id="name" placeholder="Имя" required>
             <label class="visually-hidden" for="phone">Телефон</label>
-            <input type="number" name="phone" id="phone" placeholder="Телефон" required>
+            <input type="tel" name="phone" id="phone" pattern="[0-9]" placeholder="Телефон" required>
             <button class="feedback__submit" type="submit">отправить</button>
           </form>
         </div>

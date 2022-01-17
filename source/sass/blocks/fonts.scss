@@ -2,7 +2,7 @@
   font-family: "RobotoCondensed";
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   src: url("../fonts/roboto_condensed-bold.woff2") format("woff2"), url("../fonts/roboto_condensed-bold.woff") format("woff");
 }
 
@@ -10,7 +10,7 @@
   font-family: "RobotoCondensed";
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   src: url("../fonts/roboto_condensed-regular.woff2") format("woff2"), url("../fonts/roboto_condensed-regular.woff") format("woff");
 }
 
@@ -18,7 +18,7 @@
   font-family: "RobotoCondensed";
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   src: url("../fonts/roboto_condensed-light.woff2") format("woff2"), url("../fonts/roboto_condensed-light.woff") format("woff");
 }
 
@@ -26,7 +26,7 @@
   font-family: "BebasNeue";
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   src: url("../fonts/bebas_neue_bold.woff2") format("woff2"), url("../fonts/bebas_neue_bold.woff") format("woff");
 }
 
@@ -34,6 +34,6 @@
   font-family: "BebasNeue";
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
+  font-display: swap;
   src: url("../fonts/bebas_neue_regular.woff2") format("woff2"), url("../fonts/bebas_neue_regular.woff") format("woff");
 }

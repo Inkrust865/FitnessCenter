@@ -6,7 +6,7 @@
     TABLET_WIDTH : 767
   };
 
-  var buttonScroll = document.querySelector('.intro__button');
+  var buttonScroll = document.querySelector('#intro__button');
   var subscriptionBlock = document.querySelector('.subscription');
 
   var slideIndex = 1;
